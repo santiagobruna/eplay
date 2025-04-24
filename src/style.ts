@@ -1,0 +1,27 @@
+import styled, { createGlobalStyle } from 'styled-components'
+
+export const cores = {
+  branca: 'rgba(255, 255, 255, 1)',
+  preta: 'rgba(17, 17, 17, 1)',
+  cinza: 'rgba(51, 51, 51, 1)',
+  verde: 'rgba(16, 172, 132, 1)'
+}
+export const GlobalStyle = createGlobalStyle`
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, sans-serif;
+        list-style: none;
+    }
+    body {
+        background-color: ${cores.preta};
+        color: ${cores.branca};
+        padding-top: 40px;
+    }
+`
+export const Container = styled.div `
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+`
