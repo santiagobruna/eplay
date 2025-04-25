@@ -1,0 +1,27 @@
+import styled from "styled-components";
+import { cores } from "../../style";
+import { TagContainer } from "../Tag/style";
+
+export const Card = styled.div`
+    background-color: ${cores.cinza};
+    padding: 8px;
+    border-radius: 8px;
+
+    ${TagContainer} {
+        margin-right: 8px;
+    }
+
+`
+export const Titulo = styled.h3`
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: 16px 0 8px 0;
+`
+
+export const Descricao = styled.p`
+    font-size: 14px;
+    line-height: 22px;
+    display: block;
+    margin-top: 16px;
+`
