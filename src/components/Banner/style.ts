@@ -9,7 +9,11 @@ export const Imagem = styled.div`
     background-size: cover;
     font-weight: bold;
     .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
         position: relative;
+        padding-top: 340px; 
     }
     ${TagContainer} {
         position: absolute;
@@ -18,7 +22,6 @@ export const Imagem = styled.div`
     `
 
 export const Titulo = styled.h2`
-    padding-top: 340px; 
     font-size: 36px;
     max-width: 450px;
 `
