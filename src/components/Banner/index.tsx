@@ -26,7 +26,7 @@ const Banner = () => {
                     por apenas  {formatPrice(game.prices.current)}
                     </Precos>
                 </div>
-                <Button type="link" to="/produto" title="Clique aqui para aproveitar esta oferta">
+                <Button type="link" to={`/product/${game.id}`} title="Clique aqui para aproveitar esta oferta">
                     Aproveitar
                 </Button>
             </div>
