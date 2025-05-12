@@ -3,6 +3,8 @@ import Hero from '../../components/Hero';
 import Section from '../../components/Section';
 import Galery from '../../components/Galery';
 
+import resident from '../../assets/resident.png'
+
 const Product = () => {
     const {id} = useParams();
     return(
@@ -22,7 +24,7 @@ const Product = () => {
 
                 </p>
             </Section>
-            <Galery/>
+            <Galery defaultCover={resident} name='Jogo Teste'/>
         </>
     )
 }
