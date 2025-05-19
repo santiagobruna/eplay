@@ -1,31 +1,27 @@
-import styled from "styled-components";
-import { cores } from "../../style";
-
+import styled from 'styled-components'
+import { cores } from '../../style'
 
 export const Container = styled.footer`
-    background-color: ${cores.cinza};
-    padding: 32px 0;
-    font-size: 14px;
+  background-color: ${cores.cinza};
+  padding: 32px 0;
+  font-size: 14px;
 `
 export const SectionTitle = styled.h4`
-    color: ${cores.branca};
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 16px;
-    
+  color: ${cores.branca};
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 16px;
 `
 export const Links = styled.ul`
-    display: flex;
-
+  display: flex;
 `
 export const Link = styled.a`
-    color: ${cores.cinzaClaro};
-    text-decoration: none;
-    margin-right: 8px;
-    cursor: pointer;
-
+  color: ${cores.cinzaClaro};
+  text-decoration: none;
+  margin-right: 8px;
+  cursor: pointer;
 `
 
 export const FooterSection = styled.div`
-    margin-bottom: 64px;
+  margin-bottom: 64px;
 `

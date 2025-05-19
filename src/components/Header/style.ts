@@ -5,7 +5,7 @@ export const HeaderBar = styled.div`
   background-color: ${cores.cinza};
   border-radius: 16px;
   padding: 24px;
-  margin-bottom: 80px ;
+  margin-bottom: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,27 +14,24 @@ export const HeaderBar = styled.div`
     display: flex;
     align-items: center;
   }
-  a{
-        color: ${cores.branca};
-        font-weight: bold;
-        text-decoration: none;
-    }
-    
+  a {
+    color: ${cores.branca};
+    font-weight: bold;
+    text-decoration: none;
+  }
 `
 export const Links = styled.ul`
-    display: flex;
-    margin-left: 40px;
-
+  display: flex;
+  margin-left: 40px;
 `
 export const LinkItem = styled.li`
-    margin-right: 16px;
+  margin-right: 16px;
 `
 export const LinkCart = styled.a`
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    img{
-        margin-left: 16px;
-    }
-
+  img {
+    margin-left: 16px;
+  }
 `

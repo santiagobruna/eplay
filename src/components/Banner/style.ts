@@ -1,46 +1,45 @@
-import styled from "styled-components";
-import { TagContainer } from "../Tag/style";
+import styled from 'styled-components'
+import { TagContainer } from '../Tag/style'
 
 export const Imagem = styled.div`
-    width: 100%;
-    height: 560px;
-    display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-weight: bold;
+  width: 100%;
+  height: 560px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: bold;
+  position: relative;
+  .container {
     position: relative;
-    .container {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        position: relative;
-        padding-top: 340px; 
-    }
-    ${TagContainer} {
-        position: absolute;
-        top: 32px;
-    }
-    &::after{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        content: '';
-    }
-    `
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    padding-top: 340px;
+  }
+  ${TagContainer} {
+    position: absolute;
+    top: 32px;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    content: '';
+  }
+`
 
 export const Titulo = styled.h2`
-    font-size: 36px;
-    max-width: 450px;
+  font-size: 36px;
+  max-width: 450px;
 `
 
 export const Precos = styled.p`
-    max-width: 232px;
-    font-size: 24px;
-    margin-top: 24px;
-
+  max-width: 232px;
+  font-size: 24px;
+  margin-top: 24px;
 `
