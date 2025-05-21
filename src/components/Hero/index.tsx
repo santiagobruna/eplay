@@ -1,15 +1,20 @@
-import bannerImg from '../../assets/fundo-hogwarts.png'
 import { Game } from '../../pages/Home'
 import Button from '../Button'
 import Tag from '../Tag'
 import { Banner, Infos } from './style'
 import { formatPrice } from '../ProductsList'
-
+import { useDispatch } from 'react-redux'
+import { add, open } from '../../store/reducers/cart'
 type Props = {
   game: Game
 }
 
 const Hero = ({ game }: Props) => {
+  const dispatch = useDispatch()
+  const addToCart = () => {
+    dispatch(add(game))
+    dispatch(open())
+  }
   return (
     <Banner style={{ backgroundImage: `url(${game.media.cover})` }}>
       <div className="container">
@@ -29,6 +34,7 @@ const Hero = ({ game }: Props) => {
           </p>
           {game.prices.current && (
             <Button
+              onClick={addToCart}
               variant="primary"
               type="button"
               title="Clique aqui para adicionar este jogo ao carrinho"
