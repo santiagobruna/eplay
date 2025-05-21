@@ -6,6 +6,7 @@ export type Props = {
   title: string
   background: 'gray' | 'black'
   games: Game[]
+  id?: string
 }
 export const formatPrice = (preco = 0) => {
   return new Intl.NumberFormat('pt-BR', {
@@ -13,7 +14,7 @@ export const formatPrice = (preco = 0) => {
     currency: 'BRL'
   }).format(preco)
 }
-const ProductsList = ({ title, background, games }: Props) => {
+const ProductsList = ({ title, background, games, id }: Props) => {
   const getGameTags = (game: Game) => {
     const tags = []
     if (game.release_date) {
@@ -28,7 +29,7 @@ const ProductsList = ({ title, background, games }: Props) => {
     return tags
   }
   return (
-    <Container background={background}>
+    <Container id={id} background={background}>
       <div className="container">
         <Title>{title}</Title>
         <List>

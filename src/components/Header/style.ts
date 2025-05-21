@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../style'
+import { breakpoints, cores } from '../../style'
 
 export const HeaderBar = styled.div`
   background-color: ${cores.cinza};
@@ -18,6 +18,9 @@ export const HeaderBar = styled.div`
     color: ${cores.branca};
     font-weight: bold;
     text-decoration: none;
+  }
+  @media(max-width: ${breakpoints.tablet}){
+    display: none;
   }
 `
 export const Links = styled.ul`

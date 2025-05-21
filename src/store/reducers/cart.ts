@@ -18,7 +18,7 @@ const cartSlice = createSlice({
       if (!game) {
         state.items.push(action.payload)
       } else {
-        alert('O jogo já está no carrinho')
+        alert('O jogo já está no carrinho.')
       }
     },
     remove: (state, action: PayloadAction<number>) => {
