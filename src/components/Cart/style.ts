@@ -33,7 +33,18 @@ export const SideBar = styled.aside`
   background-color: ${cores.cinza};
   z-index: 1;
   padding: 40px 16px 0 16px;
-
+  position: relative;
+  .btn-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #DA6C6C;
+    color: ${cores.branca};
+    font-weight: bold;
+    padding: 5px 10px;
+  }
   ${ButtonContainer} {
     max-width: 100%;
     width: 100%;
@@ -58,6 +69,7 @@ export const Quantity = styled.p`
 `
 export const CartItem = styled.li`
   display: flex;
+  margin-top: 20px;
   border-bottom: 1px solid ${cores.cinzaClaro};
   padding: 8px 0;
   position: relative;

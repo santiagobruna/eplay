@@ -32,6 +32,7 @@ const Cart = () => {
     <CartContainer className={isOpen ? 'is-open' : ''}>
       <Overlay onClick={closeCart} />
       <SideBar>
+      <button className='btn-close' onClick={closeCart}>Fechar</button>
         <ul>
           {items.map((item) => (
             // eslint-disable-next-line react/jsx-key
