@@ -1,7 +1,43 @@
+// api.ts
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { Game } from '../pages/Home'
 
-const api = createApi({
+type Product = {
+  id: number
+  price: number
+}
+
+type PurchasePayload = {
+  products: Product[]
+  billing: {
+    name: string
+    email: string
+    document: string
+  }
+  delivery: {
+    email: string
+  }
+  payment: {
+    card: {
+      active: boolean
+      ower?: {
+        name: string
+        document: string
+      }
+      name?: string
+      number?: string
+      expires?: {
+        month: number
+        year: number
+      }
+      code?: number
+    }
+    installments: number
+  }
+}
+
+export const api = createApi({
+  reducerPath: 'api',
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://fake-api-tau.vercel.app/api/eplay'
   }),
@@ -32,9 +68,18 @@ const api = createApi({
     }),
     getGame: builder.query<Game, string>({
       query: (id) => `jogos/${id}`
+    }),
+    purchase: builder.mutation<void, PurchasePayload>({
+      query: (body) => ({
+        url: 'checkout',
+        method: 'POST',
+        body
+      })
     })
   })
 })
+
+// Agora que o `api` foi criado, pode exportar os hooks sem erro:
 export const {
   useGetFeaturedGameQuery,
   useGetOnSaleQuery,
@@ -44,6 +89,6 @@ export const {
   useGetSimulationGamesQuery,
   useGetFightGamesQuery,
   useGetRpgGamesQuery,
-  useGetGameQuery
+  useGetGameQuery,
+  usePurchaseMutation
 } = api
-export default api

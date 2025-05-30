@@ -37,8 +37,10 @@ export const LinkItem = styled.li`
 export const NavMobile = styled.nav`
   display: none;
   
-  &.active {
-    display: block;
+  @media (max-width: ${breakpoints.tablet}) {
+    &.active {
+      display: block;
+    }
   }
 `
 export const CartButton = styled.a`

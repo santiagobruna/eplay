@@ -7,9 +7,11 @@ import boleto from '../../assets/barcode.png'
 import cartao from '../../assets/credit-card.png'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
+import { usePurchaseMutation } from '../../services/api'
 
 const Checkout = () => {
   const [payWithCard, setPayWithCard] = useState(false)
+  const [purchase, {isLoading, isError, data}] = usePurchaseMutation()
   const form = useFormik({
     initialValues: {
       fullName: '',
@@ -44,7 +46,39 @@ const Checkout = () => {
       installments: Yup.string().when((values, schema) => payWithCard ? schema.required('Campo obrigatório') : schema),
     }),
     onSubmit: (values) => {
-      console.log(values)
+      purchase({
+        billing: {
+          document: values.cpf,
+          email: values.email,
+          name: values.fullName,
+        },
+        delivery: {
+          email: values.deliveryEmail,
+        },
+        payment: {
+          installments: 1,
+          card: {
+            active: payWithCard,
+            code: Number(values.cardCode),
+            name: values.cardDisplayName,
+            number: values.cardNumber,
+            ower: {
+              document: values.cpfCardOwner,
+              name: values.cardOwner,
+            },
+            expires: {
+              month: 1,
+              year: 2025,
+            },
+          },
+        },
+        products: [
+          {
+            id: 1,
+            price: 200
+          }
+        ]
+      })
     }
   })
   const getErrorMessage = (fieldName: string, message?: string) => {
