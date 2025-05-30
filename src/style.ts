@@ -8,8 +8,8 @@ export const cores = {
   cinzaClaro: 'rgba(163, 163, 163, 1)'
 }
 export const breakpoints = {
-    desktop: '1024px',
-    tablet: '768px',
+  desktop: '1024px',
+  tablet: '768px'
 }
 export const GlobalStyle = createGlobalStyle`
     * {

@@ -40,7 +40,7 @@ export const SideBar = styled.aside`
     right: 10px;
     border: none;
     cursor: pointer;
-    background-color: #DA6C6C;
+    background-color: #da6c6c;
     color: ${cores.branca};
     font-weight: bold;
     padding: 5px 10px;

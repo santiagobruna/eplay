@@ -19,7 +19,7 @@ export const HeaderBar = styled.div`
     font-weight: bold;
     text-decoration: none;
   }
-  @media(max-width: ${breakpoints.tablet}){
+  @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }
 `

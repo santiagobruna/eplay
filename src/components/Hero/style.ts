@@ -14,7 +14,7 @@ export const Banner = styled.div`
 
   padding-top: 16px;
 
-  @media(max-width: ${breakpoints.tablet}){
+  @media (max-width: ${breakpoints.tablet}) {
     background-size: cover;
   }
 
