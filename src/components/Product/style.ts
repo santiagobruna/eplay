@@ -4,6 +4,7 @@ import { TagContainer } from '../Tag/style'
 import { Link } from 'react-router-dom'
 
 export const Card = styled(Link)`
+  height: 100%;
   background-color: ${cores.cinza};
   padding: 8px;
   border-radius: 8px;

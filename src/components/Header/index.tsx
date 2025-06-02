@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-
+import { HashLink } from 'react-router-hash-link'
 import { HeaderBar, CartButton, LinkItem, Links, Hamburguer, HeaderRow, NavMobile } from './style'
 
 import logo from '../../assets/logo.svg'
@@ -32,13 +32,13 @@ const Header = () => {
           <nav>
             <Links>
               <LinkItem>
-                <Link to="/categorias">Categorias</Link>
+                <Link to="/categorias" title='Clique aqui para acessar a página de categorias'>Categorias</Link>
               </LinkItem>
               <LinkItem>
-                <a href="#">Novidades</a>
+                <HashLink title='Clique aqui para acessar a seção de embreve' to="/#coming-soon">Em breve</HashLink>
               </LinkItem>
               <LinkItem>
-                <a href="#">Promoções</a>
+                <HashLink title='Clique aqui para acessar a seção de promoções' to="/#on-sale">Promoções</HashLink>
               </LinkItem>
             </Links>
           </nav>
@@ -51,13 +51,13 @@ const Header = () => {
       <NavMobile className={isMenuOpen ? 'active' : ''}>
             <Links>
               <LinkItem>
-                <Link to="/categorias">Categorias</Link>
+                <Link onClick={() => setIsMenuOpen(false)} title='Clique aqui para acessar a página de categorias' to="/categorias">Categorias</Link>
               </LinkItem>
               <LinkItem>
-                <a href="#">Novidades</a>
+                <HashLink onClick={() => setIsMenuOpen(false)} title='Clique aqui para acessar a seção de embreve' to="/#coming-soon">Em breve</HashLink>
               </LinkItem>
               <LinkItem>
-                <a href="#">Promoções</a>
+                <HashLink onClick={() => setIsMenuOpen(false)} title='Clique aqui para acessar a seção de promoções' to="/#on-sale">Promoções</HashLink>
               </LinkItem>
             </Links>
       </NavMobile>

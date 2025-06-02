@@ -1,13 +1,17 @@
-import { Imagem, Precos, Titulo } from './style'
 import Tag from '../Tag'
 import Button from '../Button'
+
 import { formatPrice } from '../ProductsList'
 import { useGetFeaturedGameQuery } from '../../services/api'
+
+import { Imagem, Precos, Titulo } from './style'
+
 const Banner = () => {
   const { data: game } = useGetFeaturedGameQuery()
   if (!game) {
     return <h3>Carregando...</h3>
   }
+
   return (
     <Imagem style={{ backgroundImage: `url(${game.media.cover})` }}>
       <div className="container">

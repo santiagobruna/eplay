@@ -6,6 +6,10 @@ type Product = {
   id: number
   price: number
 }
+type PurchaseResponse = {
+  orderId: string
+  message: string
+}
 
 type PurchasePayload = {
   products: Product[]
@@ -69,7 +73,7 @@ export const api = createApi({
     getGame: builder.query<Game, string>({
       query: (id) => `jogos/${id}`
     }),
-    purchase: builder.mutation<void, PurchasePayload>({
+    purchase: builder.mutation<PurchaseResponse, PurchasePayload>({
       query: (body) => ({
         url: 'checkout',
         method: 'POST',

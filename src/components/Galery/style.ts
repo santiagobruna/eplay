@@ -20,6 +20,7 @@ export const Action = styled.div`
   transition: opacity 0.5s ease;
 `
 export const Item = styled.li`
+  cursor: zoom-in;
   position: relative;
   > img {
     border: 2px solid ${cores.branca};
@@ -32,7 +33,6 @@ export const Item = styled.li`
   &:hover {
     ${Action} {
       opacity: 1;
-      cursor: pointer;
       transition: opacity 0.5s ease;
     }
   }
