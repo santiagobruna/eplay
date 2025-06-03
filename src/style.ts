@@ -1,11 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const cores = {
-  branca: 'rgba(255, 255, 255, 1)',
-  preta: 'rgba(17, 17, 17, 1)',
-  cinza: 'rgba(51, 51, 51, 1)',
-  verde: 'rgba(16, 172, 132, 1)',
-  cinzaClaro: 'rgba(163, 163, 163, 1)'
+export const colors = {
+  white: 'rgba(255, 255, 255, 1)',
+  black: 'rgba(17, 17, 17, 1)',
+  gray: 'rgba(51, 51, 51, 1)',
+  green: 'rgba(16, 172, 132, 1)',
+  ligthGray: 'rgba(163, 163, 163, 1)'
 }
 export const breakpoints = {
   desktop: '1024px',
@@ -20,8 +20,8 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
     }
     body {
-        background-color: ${cores.preta};
-        color: ${cores.branca};
+        background-color: ${colors.black};
+        color: ${colors.white};
         padding-top: 40px;
     }
 

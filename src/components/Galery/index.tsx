@@ -5,7 +5,7 @@ import close from '../../assets/close.png'
 
 import play from '../../assets/play.png'
 import zoom from '../../assets/zoom.png'
-import { Item, Items, Action, Modal, ModalContent } from './style'
+import * as S from './style'
 import { GalleryItem } from '../../pages/Home'
 
 type Props = {
@@ -43,9 +43,9 @@ const Galery = ({ defaultCover, name, items }: Props) => {
   return (
     <>
       <Section title="Galeria" background="black">
-        <Items>
+        <S.Items>
           {items.map((media, index) => (
-            <Item
+            <S.Item
               key={media.url}
               onClick={() => {
                 setModal({
@@ -59,24 +59,24 @@ const Galery = ({ defaultCover, name, items }: Props) => {
                 src={getMidiaCover(media)}
                 alt={`Mídia ${index + 1} de ${name}`}
               />
-              <Action>
+              <S.Action>
                 <img
                   src={getMidiaIcon(media)}
                   alt="Clique para maximizar a Mídia"
                 />
-              </Action>
-            </Item>
+              </S.Action>
+            </S.Item>
           ))}
-        </Items>
+        </S.Items>
       </Section>
-      <Modal className={modal.isVisible ? 'visivel' : ''}>
-        <ModalContent className="container">
+      <S.Modal className={modal.isVisible ? 'is-visible' : ''}>
+        <S.ModalContent className="container">
           <header>
             <h4>{name}</h4>
             <img
               src={close}
               alt="Ícone de fechar Modal"
-              onClick={() => closeModal()}
+              onClick={closeModal}
             />
           </header>
           {modal.type === 'image' ? (
@@ -84,9 +84,9 @@ const Galery = ({ defaultCover, name, items }: Props) => {
           ) : (
             <iframe src={modal.url} frameBorder={0}></iframe>
           )}
-        </ModalContent>
+        </S.ModalContent>
         <div className="overlay" onClick={() => closeModal()}></div>
-      </Modal>
+      </S.Modal>
     </>
   )
 }

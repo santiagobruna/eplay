@@ -1,19 +1,14 @@
 import { Game } from '../../pages/Home'
 import Product from '../Product'
-import { Container, List, Title } from './style'
-
+import * as S from './style'
+import { formatPrice } from '../../utils'
 export type Props = {
   title: string
   background: 'gray' | 'black'
   games: Game[]
   id?: string
 }
-export const formatPrice = (preco = 0) => {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  }).format(preco)
-}
+
 const ProductsList = ({ title, background, games, id }: Props) => {
   const getGameTags = (game: Game) => {
     const tags = []
@@ -29,10 +24,10 @@ const ProductsList = ({ title, background, games, id }: Props) => {
     return tags
   }
   return (
-    <Container id={id} background={background}>
+    <S.Container id={id} background={background}>
       <div className="container">
-        <Title>{title}</Title>
-        <List>
+        <S.Title>{title}</S.Title>
+        <S.List>
           {games.map((game) => (
             <li key={game.id}>
               <Product
@@ -46,9 +41,9 @@ const ProductsList = ({ title, background, games, id }: Props) => {
               />
             </li>
           ))}
-        </List>
+        </S.List>
       </div>
-    </Container>
+    </S.Container>
   )
 }
 export default ProductsList
