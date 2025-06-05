@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, HashRouter } from 'react-router-dom'
 import Header from './components/Header'
 import { GlobalStyle } from './style'
 
@@ -11,7 +11,7 @@ import Cart from './components/Cart'
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter basename='/eplay'>
+      <HashRouter basename='/eplay'>
         <GlobalStyle />
         <div className="container">
           <Header />
@@ -19,7 +19,7 @@ function App() {
         <Rotas />
         <Footer />
         <Cart />
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   )
 }
