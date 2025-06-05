@@ -34,6 +34,7 @@ const Categories = () => {
           games={simulationGames}
           title="Simulação"
           background="black"
+          id="simulation"
           isLoading={isLoadingSimulationGames}
         />
         <ProductsList

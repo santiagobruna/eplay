@@ -15,12 +15,15 @@ export const HeaderBar = styled.div`
   padding: 24px;
   margin-bottom: 80px;
 
-  a {
+  a, span {
     color: ${colors.white};
     font-weight: bold;
     text-decoration: none;
   }
   
+  h1{ 
+    line-height: 0;
+  }
 `
 
 export const LinkItem = styled.li`
@@ -43,9 +46,10 @@ export const NavMobile = styled.nav`
     }
   }
 `
-export const CartButton = styled.a`
+export const CartButton = styled.span`
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   img {
     margin-left: 16px;

@@ -6,7 +6,6 @@ import close from '../../assets/close.png'
 import play from '../../assets/play.png'
 import zoom from '../../assets/zoom.png'
 import * as S from './style'
-import { GalleryItem } from '../../pages/Home'
 
 type Props = {
   defaultCover: string
