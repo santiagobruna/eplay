@@ -11,7 +11,7 @@ import Cart from './components/Cart'
 function App() {
   return (
     <Provider store={store}>
-      <HashRouter basename='/eplay'>
+      <HashRouter basename="/eplay">
         <GlobalStyle />
         <div className="container">
           <Header />
