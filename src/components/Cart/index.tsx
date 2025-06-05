@@ -19,7 +19,7 @@ const Cart = () => {
   const removeItem = (id: number) => {
     dispatch(remove(id))
   }
-  const goToCheckout = () => { 
+  const goToCheckout = () => {
     navigate('/checkout')
     closeCart()
   }
@@ -29,40 +29,45 @@ const Cart = () => {
       <S.SideBar>
         {items.length > 0 ? (
           <>
-          <button className="btn-close" onClick={closeCart}>
-            Fechar
-          </button>
-          <ul>
-            {items.map((item) => (
-              // eslint-disable-next-line react/jsx-key
-              <S.CartItem key={item.id}>
-                <img src={item.media.thumbnail} alt={item.name} />
-                <div>
-                  <h3>{item.name}</h3>
-                  <Tag>{item.details.category}</Tag>
-                  <Tag>{item.details.system}</Tag>
-                  <span>{formatPrice(item.prices.current)}</span>
-                </div>
-                <button onClick={() => removeItem(item.id)} type="button" />
-              </S.CartItem>
-            ))}
-          </ul>
-          <S.Quantity>{items.length} jogo(s) no carrinho</S.Quantity>
-          <S.Prices>
-            Total de {formatPrice(getTotalPrice(items))} {''}
-            <span>Em até 6x sem juros</span>
-          </S.Prices>
-          <Button title="Clique aqui para continuar com a compra" type="button" onClick={goToCheckout}>
-            Continuar com a compra
-          </Button>
+            <button className="btn-close" onClick={closeCart}>
+              Fechar
+            </button>
+            <ul>
+              {items.map((item) => (
+                // eslint-disable-next-line react/jsx-key
+                <S.CartItem key={item.id}>
+                  <img src={item.media.thumbnail} alt={item.name} />
+                  <div>
+                    <h3>{item.name}</h3>
+                    <Tag>{item.details.category}</Tag>
+                    <Tag>{item.details.system}</Tag>
+                    <span>{formatPrice(item.prices.current)}</span>
+                  </div>
+                  <button onClick={() => removeItem(item.id)} type="button" />
+                </S.CartItem>
+              ))}
+            </ul>
+            <S.Quantity>{items.length} jogo(s) no carrinho</S.Quantity>
+            <S.Prices>
+              Total de {formatPrice(getTotalPrice(items))} {''}
+              <span>Em até 6x sem juros</span>
+            </S.Prices>
+            <Button
+              title="Clique aqui para continuar com a compra"
+              type="button"
+              onClick={goToCheckout}
+            >
+              Continuar com a compra
+            </Button>
           </>
-        ): (
+        ) : (
           <>
             <button className="btn-close" onClick={closeCart}>
-            Fechar
+              Fechar
             </button>
-            <p className='empty-text'>
-              Seu carrinho está vazio. Adicione jogos para continuar com a compra.
+            <p className="empty-text">
+              Seu carrinho está vazio. Adicione jogos para continuar com a
+              compra.
             </p>
           </>
         )}

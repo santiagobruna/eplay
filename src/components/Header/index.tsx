@@ -34,34 +34,67 @@ const Header = () => {
           <nav>
             <S.Links>
               <S.LinkItem>
-                <Link to="/categorias" title='Clique aqui para acessar a página de categorias'>Categorias</Link>
+                <Link
+                  to="/categorias"
+                  title="Clique aqui para acessar a página de categorias"
+                >
+                  Categorias
+                </Link>
               </S.LinkItem>
               <S.LinkItem>
-                <HashLink title='Clique aqui para acessar a seção de embreve' to="/#coming-soon">Em breve</HashLink>
+                <HashLink
+                  title="Clique aqui para acessar a seção de embreve"
+                  to="/#coming-soon"
+                >
+                  Em breve
+                </HashLink>
               </S.LinkItem>
               <S.LinkItem>
-                <HashLink title='Clique aqui para acessar a seção de promoções' to="/#on-sale">Promoções</HashLink>
+                <HashLink
+                  title="Clique aqui para acessar a seção de promoções"
+                  to="/#on-sale"
+                >
+                  Promoções
+                </HashLink>
               </S.LinkItem>
             </S.Links>
           </nav>
         </div>
-        <S.CartButton role='button' onClick={openCart}>
+        <S.CartButton role="button" onClick={openCart}>
           {items.length} <span> - produto(s)</span>
           <img src={cart} alt="Carrinho" />
         </S.CartButton>
       </S.HeaderRow>
       <S.NavMobile className={isMenuOpen ? 'active' : ''}>
-            <S.Links>
-              <S.LinkItem>
-                <Link onClick={() => setIsMenuOpen(false)} title='Clique aqui para acessar a página de categorias' to="/categorias">Categorias</Link>
-              </S.LinkItem>
-              <S.LinkItem>
-                <HashLink onClick={() => setIsMenuOpen(false)} title='Clique aqui para acessar a seção de embreve' to="/#coming-soon">Em breve</HashLink>
-              </S.LinkItem>
-              <S.LinkItem>
-                <HashLink onClick={() => setIsMenuOpen(false)} title='Clique aqui para acessar a seção de promoções' to="/#on-sale">Promoções</HashLink>
-              </S.LinkItem>
-            </S.Links>
+        <S.Links>
+          <S.LinkItem>
+            <Link
+              onClick={() => setIsMenuOpen(false)}
+              title="Clique aqui para acessar a página de categorias"
+              to="/categorias"
+            >
+              Categorias
+            </Link>
+          </S.LinkItem>
+          <S.LinkItem>
+            <HashLink
+              onClick={() => setIsMenuOpen(false)}
+              title="Clique aqui para acessar a seção de embreve"
+              to="/#coming-soon"
+            >
+              Em breve
+            </HashLink>
+          </S.LinkItem>
+          <S.LinkItem>
+            <HashLink
+              onClick={() => setIsMenuOpen(false)}
+              title="Clique aqui para acessar a seção de promoções"
+              to="/#on-sale"
+            >
+              Promoções
+            </HashLink>
+          </S.LinkItem>
+        </S.Links>
       </S.NavMobile>
     </S.HeaderBar>
   )

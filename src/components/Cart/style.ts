@@ -49,7 +49,7 @@ export const SideBar = styled.aside`
     max-width: 100%;
     width: 100%;
   }
-  .empty-text{
+  .empty-text {
     font-size: 14px;
     line-height: 22px;
     color: ${colors.white};

@@ -24,27 +24,28 @@ const ProductsList = ({ title, background, games, id, isLoading }: Props) => {
     }
     return tags
   }
-  if(isLoading){
-    <Loader/>
+  if (isLoading) {
+    ;<Loader />
   }
   return (
     <S.Container id={id} background={background}>
       <div className="container">
         <S.Title>{title}</S.Title>
         <S.List>
-          {games && games.map((game) => (
-            <li key={game.id}>
-              <Product
-                id={game.id}
-                category={game.details.category}
-                description={game.description}
-                image={game.media.thumbnail}
-                infos={getGameTags(game)}
-                system={game.details.system}
-                title={game.name}
-              />
-            </li>
-          ))}
+          {games &&
+            games.map((game) => (
+              <li key={game.id}>
+                <Product
+                  id={game.id}
+                  category={game.details.category}
+                  description={game.description}
+                  image={game.media.thumbnail}
+                  infos={getGameTags(game)}
+                  system={game.details.system}
+                  title={game.name}
+                />
+              </li>
+            ))}
         </S.List>
       </div>
     </S.Container>

@@ -4,7 +4,7 @@ import { breakpoints, colors } from '../../style'
 export const Links = styled.ul`
   display: flex;
   margin-left: 40px;
-  @media(max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.tablet}) {
     margin-left: 0;
     display: block;
   }
@@ -15,20 +15,21 @@ export const HeaderBar = styled.div`
   padding: 24px;
   margin-bottom: 80px;
 
-  a, span {
+  a,
+  span {
     color: ${colors.white};
     font-weight: bold;
     text-decoration: none;
   }
-  
-  h1{ 
+
+  h1 {
     line-height: 0;
   }
 `
 
 export const LinkItem = styled.li`
   margin-right: 16px;
-  @media(max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.tablet}) {
     margin-right: 0;
     a {
       display: block;
@@ -39,7 +40,7 @@ export const LinkItem = styled.li`
 `
 export const NavMobile = styled.nav`
   display: none;
-  
+
   @media (max-width: ${breakpoints.tablet}) {
     &.active {
       display: block;
@@ -55,9 +56,10 @@ export const CartButton = styled.span`
     margin-left: 16px;
   }
   @media (max-width: ${breakpoints.tablet}) {
-    span{ display: none; }
+    span {
+      display: none;
+    }
   }
-  
 `
 export const Hamburguer = styled.div`
   width: 32px;
@@ -85,10 +87,10 @@ export const HeaderRow = styled.div`
     @media (max-width: ${breakpoints.tablet}) {
       flex: 1;
       justify-content: space-between;
-      
+
       ${Links} {
-      display: none;
+        display: none;
+      }
     }
-  }
   }
 `

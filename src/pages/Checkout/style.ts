@@ -16,7 +16,7 @@ export const Row = styled.div<RowProps>`
   margin-top: ${(props) => props.marginTop || '0'};
   align-items: flex-end;
 
-  @media(max-width: ${breakpoints.tablet}){
+  @media (max-width: ${breakpoints.tablet}) {
     display: block;
     margin-top: 16px;
   }
@@ -38,11 +38,11 @@ export const Group = styled.div<InputGroupProps>`
     padding: 0 8px;
     border: 1px solid ${colors.white};
 
-    &.error{
-      border: 1px solid red
+    &.error {
+      border: 1px solid red;
     }
   }
-  @media(max-width: ${breakpoints.tablet}){
+  @media (max-width: ${breakpoints.tablet}) {
     margin-top: 16px;
   }
 `
@@ -53,14 +53,15 @@ export const TabButton = styled.button<TabButtonProps>`
   font-size: 14px;
   font-weight: bold;
   color: ${colors.white};
-  background-color: ${(props) => (props.isActive ? colors.green : colors.black)};
+  background-color: ${(props) =>
+    props.isActive ? colors.green : colors.black};
   margin-right: 16px;
   padding: 0 8px;
   cursor: pointer;
   img {
     margin-right: 8px;
   }
-  @media(max-width: ${breakpoints.tablet}){
+  @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
     margin-top: 8px;
   }
