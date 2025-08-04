@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# 🎮 E-commerce de Jogos Digital
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O eplay é um e-commerce front-end focado em jogos digitais. Aqui, o usuário pode navegar por categorias variadas de jogos como promoções, lançamentos, ação, RPG e muito mais além de conferir os detalhes de cada jogo individualmente.
 
-## Available Scripts
+O site também permite simular o processo de compra, onde o usuário preenche dados de pagamento, entrega e produtos, e a aplicação envia essas informações para uma API fake que valida e responde com uma confirmação do pedido.
 
-In the project directory, you can run:
+Tudo isso com uma experiência fluida e moderna, pensada para quem curte videogame e quer uma plataforma simples, bonita e funcional para encontrar e comprar seus jogos favoritos.
 
-### `npm start`
+## Funcionalidades:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Catálogo completo de jogos por categoria:
+  - Navegue facilmente entre jogos em destaque, promoções, lançamentos, ação, RPG, esportes, simulação, luta e muito mais.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Detalhes completos do jogo:
+  - Veja informações específicas de cada jogo, incluindo preço, descrição e imagem, para ajudar na escolha.
 
-### `npm test`
+- Simulação de compra completa:
+  - Preencha dados de cobrança, entrega e pagamento (cartão com parcelas) e finalize a compra enviando os dados para a API fake.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Hooks automáticos do RTK Query:
+  - Consumo otimizado das APIs com cache e refetch automáticos, garantindo dados atualizados e melhor performance.
 
-### `npm run build`
+- Gerenciamento de estado eficiente:
+  - Estado global controlado pelo Redux Toolkit para garantir que informações importantes, como carrinho e status da compra, estejam sincronizadas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Interface responsiva e intuitiva:
+  - Layout que se adapta para diferentes tamanhos de tela, garantindo uma boa experiência tanto no desktop quanto no mobile.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Tipagem robusta com TypeScript:
+  - Segurança e previsibilidade com tipos definidos para jogos, payload de compra e respostas da API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tecnologias utilizadas:
+- React
+- TypeScript
+- Redux Toolkit Query (RTK Query)
+- Vercel (API Fake)
+- Styled Components.
+- React Router.
+  
+## 📸 Demonstração
+![e-play](https://github.com/user-attachments/assets/881e2c75-d9c1-4f49-8c79-e7e1a310927e)
 
-### `npm run eject`
+## 📦 Como Rodar o Projeto:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone o repositório:
+``` 
+git clone https://github.com/santiagobruna/eplay.git
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+````
+2. Acesse a pasta do projeto:
+``` 
+cd eplay
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+````
+3. Instale as dependências:
+``` 
+npm install
+# ou
+yarn install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+````
+4. Execute o projeto:
+``` 
+npm start
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+````
+## Acesse o projeto
+Clicando aqui: https://eplay-tan.vercel.app/
