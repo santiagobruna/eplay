@@ -42,7 +42,7 @@ type PurchasePayload = {
 export const api = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://ebac-fake-api.vercel.app/api/eplay'
+    baseUrl: 'https://api-ebac.vercel.app/api/eplay/'
   }),
   endpoints: (builder) => ({
     getFeaturedGame: builder.query<Game, void>({
